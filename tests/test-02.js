@@ -41,8 +41,9 @@ test('Lesson 2: anagram', t => {
 });
 
 test('Lesson 2: customBind', t => {
-  let lastContext = null;
   let lastParams = null;
+
+  let lastContext = null;
   const context = { test: 'test' };
 
   function call(...params) {
@@ -283,4 +284,3 @@ test('Lesson 2: reduceFilter', t => {
     ['B', 'D']
   );
 });
-
