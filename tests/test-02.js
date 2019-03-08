@@ -83,7 +83,7 @@ test.skip('Lesson 2: getIntersection', t => {
   );
 });
 
-test.skip('Lesson 2: getUnique', t => {
+test('Lesson 2: getUnique', t => {
   t.deepEqual(
     getUnique([1, 2, 4, 2, 3, 1]),
     [1, 2, 3, 4]
