@@ -14,5 +14,5 @@
  * @return {string}
  */
 export function rle(input) {
-
+  return input.replace(/(.)\1+/g, (words, word) => `${word}${words.length}`);
 }

@@ -5,6 +5,7 @@ import { capitalize } from '../01/capitalize';
 import { passwordCheck } from '../01/passwordCheck';
 import { limitCalls } from '../01/limitCalls';
 import { rle } from '../01/rle';
+import { sum } from '../01/sum';
 
 
 test('Lesson 1: getMinMax', t => {
@@ -187,5 +188,27 @@ test('Lesson 1: rle', t => {
   t.is(
     rle('PARSELTANGSSSSHHHHHSSSSHHHHHSHHHH'),
     'PARSELTANGS4H5S4H5SH4'
+  );
+});
+
+test('Lesson 1: sum', t => {
+  t.is(
+    sum(),
+    0
+  );
+
+  t.is(
+    sum(1)(2)(),
+    3
+  );
+
+  t.is(
+    sum(10)(20)(),
+    30
+  );
+
+  t.is(
+    sum(1)(1)(1)(1)(1)(),
+    5
   );
 });

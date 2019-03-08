@@ -14,5 +14,5 @@
  * @return {number}
  */
 export function multiple(a, b) {
-
+  return Math.round(a / (1 / b));
 }
