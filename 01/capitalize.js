@@ -15,5 +15,7 @@
  * @return {string}
  */
 export function capitalize(input) {
+  const firstLetterMatcher = /(^|\s)[a-zа-я]/g;
 
+  return input.replace(firstLetterMatcher, str => str.toUpperCase());
 }

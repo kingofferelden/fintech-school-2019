@@ -11,11 +11,16 @@
  * getMinMax('"To Infinity and beyond", - repeated Buzz Lightyear 4 times in a row')
  * { max: Infinity, min: 4 }
  *
- * Больше примеров в тестах.
+ * Больше примеров в тестах.`
  *
  * @param  {string} input входная строка
  * @return {{min: number, max: number}} объект с минимумом и максимумом
  */
 export function getMinMax(input) {
+  const numberList = input.match(/[-]{0,1}[\d]*[.]{0,1}[\d]|Infinity+/g);
 
+  return {
+    max: Math.max(...numberList),
+    min: Math.min(...numberList)
+  };
 }

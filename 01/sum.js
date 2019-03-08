@@ -12,5 +12,16 @@
  * @returns а это уже сами решите
  */
 export function sum(x) {
+  let acc = x;
 
+  function f(y) {
+    if (y) {
+      acc += y;
+      return f;
+    }
+
+    return acc;
+  }
+
+  return acc ? f : 0;
 }
