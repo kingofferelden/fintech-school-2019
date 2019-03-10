@@ -21,5 +21,26 @@
  * @return {boolean}
  */
 export function meanMode(numbers) {
+  let maxIndex = 0;
+  const count = {};
 
+  const total = numbers.reduce((summary, number) => {
+    count[number] = (count[number] || 0) + 1;
+    const index = count[number];
+
+    maxIndex = index > maxIndex ? index : maxIndex;
+
+    return summary + number;
+  }, 0);
+
+  const average = total / numbers.length;
+  const modes = [];
+
+  for (const i in count) {
+    if (count[i] === maxIndex) {
+      modes.push(Number(i));
+    }
+  }
+
+  return modes.length > 1 ? false : average === modes[0];
 }

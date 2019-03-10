@@ -13,5 +13,6 @@
  * @return {number[]} массив значений, отсортированный по возрастанию
  */
 export function getIntersection(first, second) {
-
+  return first.filter(x => second.includes(x))
+    .sort((a, b) => a - b);
 }

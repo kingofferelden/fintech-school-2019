@@ -8,7 +8,7 @@ import { meanMode } from '../02/meanMode';
 import { mergeNumbers } from '../02/mergeNumbers';
 import { reduceFilter, reduceMap } from '../02/mightyReduce';
 
-test.skip('Lesson 2: anagram', t => {
+test('Lesson 2: anagram', t => {
   t.is(
     anagram('просветитель', 'терпеливость'),
     true
@@ -66,7 +66,7 @@ test.skip('Lesson 2: customBind', t => {
   );
 });
 
-test.skip('Lesson 2: getIntersection', t => {
+test('Lesson 2: getIntersection', t => {
   t.deepEqual(
     getIntersection([1, 5, 7, 9, 3], [1, 2, 3, 4]),
     [1, 3]
@@ -147,7 +147,7 @@ test.skip('Lesson 2: isIsomorphic', t => {
   );
 });
 
-test.skip('Lesson 1: meanMode', t => {
+test('Lesson 1: meanMode', t => {
   t.is(
     meanMode([1, 2, 3, 2]),
     true
