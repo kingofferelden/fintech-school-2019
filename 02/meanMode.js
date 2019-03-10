@@ -21,14 +21,14 @@
  * @return {boolean}
  */
 export function meanMode(numbers) {
-  let maxIndex = 0;
-  const count = {};
+  let maxCount = 0;
+  const storage = {};
 
   const total = numbers.reduce((summary, number) => {
-    count[number] = (count[number] || 0) + 1;
-    const index = count[number];
+    storage[number] = (storage[number] || 0) + 1;
+    const count = storage[number];
 
-    maxIndex = index > maxIndex ? index : maxIndex;
+    maxCount = count > maxCount ? count : maxCount;
 
     return summary + number;
   }, 0);
@@ -36,9 +36,9 @@ export function meanMode(numbers) {
   const average = total / numbers.length;
   const modes = [];
 
-  for (const i in count) {
-    if (count[i] === maxIndex) {
-      modes.push(Number(i));
+  for (const number in storage) {
+    if (storage[number] === maxCount) {
+      modes.push(Number(number));
     }
   }
 
