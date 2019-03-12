@@ -81,6 +81,11 @@ test('Lesson 2: getIntersection', t => {
     getIntersection([1, 1, 2], [2, 1, 1, 1]),
     [1, 1, 2]
   );
+
+  t.deepEqual(
+    getIntersection([1, 1, 1, 2], [2, 1, 1]),
+    [1, 1, 2]
+  );
 });
 
 test('Lesson 2: getUnique', t => {
