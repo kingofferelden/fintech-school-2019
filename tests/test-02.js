@@ -81,6 +81,11 @@ test('Lesson 2: getIntersection', t => {
     getIntersection([1, 1, 2], [2, 1, 1, 1]),
     [1, 1, 2]
   );
+
+  t.deepEqual(
+    getIntersection([1, 1, 1, 2], [2, 1, 1]),
+    [1, 1, 2]
+  );
 });
 
 test('Lesson 2: getUnique', t => {
@@ -146,10 +151,6 @@ test('Lesson 2: isIsomorphic', t => {
     false
   );
 
-  t.is(
-    isIsomorphic('ab', 'aa'),
-    false
-  );
 });
 
 test('Lesson 1: meanMode', t => {
