@@ -12,5 +12,7 @@
  * @param number
  */
 export function mergeNumbers(number) {
+  const arrSum = number.toString().split('').reduce((total, num) => Number(total) + Number(num), 0);
 
+  return arrSum.toString().length > 1 ? mergeNumbers(arrSum) : arrSum;
 }

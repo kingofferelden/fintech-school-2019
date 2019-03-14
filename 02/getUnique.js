@@ -12,5 +12,6 @@
  * @return {number[]} массив уникальных значений, отсортированный по возрастанию
  */
 export function getUnique(input) {
-
+  return input.filter((item, index) => input.indexOf(item) === index)
+    .sort((a, b) => a - b);
 }

@@ -12,5 +12,12 @@
  * @return {boolean}
  */
 export function anagram(first, second) {
+  return sortAlphabetical(first) === sortAlphabetical(second);
+}
 
+function sortAlphabetical(string) {
+  return string.toLowerCase()
+    .split('')
+    .sort()
+    .join('');
 }
