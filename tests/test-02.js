@@ -40,7 +40,7 @@ test('Lesson 2: anagram', t => {
   );
 });
 
-test.skip('Lesson 2: customBind', t => {
+test('Lesson 2: customBind', t => {
   let lastParams = null;
 
   let lastContext = null;
@@ -95,7 +95,7 @@ test('Lesson 2: getUnique', t => {
   );
 });
 
-test.skip('Lesson 2: isIsomorphic', t => {
+test('Lesson 2: isIsomorphic', t => {
   t.is(
     isIsomorphic('a', 'a'),
     true
@@ -143,6 +143,11 @@ test.skip('Lesson 2: isIsomorphic', t => {
 
   t.is(
     isIsomorphic('seeds', 'flags'),
+    false
+  );
+
+  t.is(
+    isIsomorphic('ab', 'aa'),
     false
   );
 });
@@ -251,7 +256,7 @@ test('Lesson 2: mergeNumbers', t => {
   );
 });
 
-test.skip('Lesson 2: reduceMap', t => {
+test('Lesson 2: reduceMap', t => {
   t.deepEqual(
     reduceMap(x => x * 2, [1, 2, 3]),
     [2, 4, 6]
@@ -263,7 +268,7 @@ test.skip('Lesson 2: reduceMap', t => {
   );
 });
 
-test.skip('Lesson 2: reduceFilter', t => {
+test('Lesson 2: reduceFilter', t => {
   t.deepEqual(
     reduceFilter(x => true, [1, 2, 3]),
     [1, 2, 3]
