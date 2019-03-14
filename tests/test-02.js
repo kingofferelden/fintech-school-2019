@@ -31,7 +31,7 @@ test('Lesson 2: anagram', t => {
 
   t.is(
     anagram('Татуин', 'Дантуин'),
-    false,
+    false
   );
 
   t.is(
@@ -150,7 +150,6 @@ test('Lesson 2: isIsomorphic', t => {
     isIsomorphic('seeds', 'flags'),
     false
   );
-
 });
 
 test('Lesson 1: meanMode', t => {
