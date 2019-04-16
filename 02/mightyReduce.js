@@ -26,5 +26,5 @@ export function reduceMap(fn, input) {
  * @param {*[]}      input массив значений
  */
 export function reduceFilter(fn, input) {
-  return input.reduce((acc, num) => (fn(num) ? acc.concat(num) : acc), []);
+  return input.reduce((acc, num) => (fn(num) ? acc.concat(num) : acc) , []);
 }
